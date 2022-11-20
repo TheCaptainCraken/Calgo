@@ -1,4 +1,4 @@
-#include "InsertionSort.h"
+#include "Sorting.h"
 
 //returns 1 if n1 > n2 else 0
 int compare_int(void* n1, void* n2){
@@ -26,6 +26,7 @@ int compare_float(void* n1, void* n2){
 
 //Insertion sort (pointer to the array, lenght of the array, size in bytes of the datatype of the array, pointer to a function that compares tro elements).
 //The function must return 1 if the first argument is considered bigger than the second. Else 0 is expected.
+//Good for small inputs but after not so much. O(N^2) speed.
 void InsertionSort(void* array, int len, size_t size, int (*compare_function)(void*, void*)){
     if(len == 1)
         return;
@@ -48,3 +49,4 @@ void InsertionSort(void* array, int len, size_t size, int (*compare_function)(vo
 
     return;
 }
+
