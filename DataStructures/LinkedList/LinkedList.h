@@ -18,7 +18,7 @@
 */
 typedef struct element_s {
     void* data;
-    struct element_s* next; 
+    struct element_s* next;
 }element_t;
 
 /*

@@ -21,7 +21,7 @@
         - element_t* element:       The new element. Returns NULL if malloc fails.
 */
 element_t* create_element(void* data) {
-    element_t* new_element = (element_t*)malloc(sizeof(element_t));
+    element_t* new_element = (element_t*) malloc(sizeof(element_t));
     if (new_element == NULL) {
         fprintf(stderr, "malloc failed.\n");
         return NULL;
@@ -135,7 +135,7 @@ int insert_at_index(element_t** head, void* data, int index) {
             tmp = tmp->next;
         }
         if (tmp == NULL) {
-                return 0;
+            return 0;
         }
         element_t* tmp2 = tmp->next;
         tmp->next = new_element;
